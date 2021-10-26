@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('page/login');
 });
+
+Route::get('/katalog', function () {
+    return view('page/katalog');
+});
+
+Route::get('/katalog', [KatalogController::class, 'index']);
