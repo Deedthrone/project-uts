@@ -1,0 +1,133 @@
+.mytask {
+    position: fixed;
+    left: 300px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,#120b24, #231A47);
+    color: white;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.homecontent {
+    margin: 15px;
+}
+
+
+/* HEADING */
+.taskfield ul li {
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.taskfield ul li i{
+    position: relative;
+    left: 120px;
+    top: 7px;
+    color: white;
+}
+
+
+/* BODY */
+.taskfield {
+    width: 386px;
+    background: none;
+    border-radius: 10px;
+    float: left;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border: white solid px;
+}
+
+.taskheader {
+    background: linear-gradient(120deg,#1EC7F1, #615bda);
+    height: 70px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+.alltask {
+    background: linear-gradient(120deg,#211644, #261a4e);
+    width: 386px;
+    min-height: 100%;
+    opacity: 100%;
+}
+
+/* PARTASK */
+.partask {
+    width: 386px;
+    background-color: black;
+    opacity: 60%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+.partask label {
+    position: relative;
+    bottom: 3px;
+    color: violet;
+}
+
+.partask p {
+    color: aliceblue;
+}
+
+.date {
+    float: right;
+}
+
+.priority {
+    width: 18px;
+    height: 18px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 50%;
+    float: right;
+}
+
+/* PENCARIAN */
+
+.pencarian {
+    margin-top: 20px;
+}
+
+.pencarian ul li{
+    list-style: none;
+    display: inline-block;
+
+}
+
+.pencarian ul input {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #0D091C;
+    border: none;
+    width: 300px;
+    height: 40px;
+    margin-right: 20px;
+    outline: none;
+    color: white;
+    opacity: 90%;
+
+}
+
+/* CLEAR */
+.clear {
+    clear: both;
+}
+
+/* ELSE */
+.navbar {
+    left: -15px;
+    top: -15px;
+}

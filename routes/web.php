@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KatalogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,20 @@ Route::get('/', function () {
     return view('page/login');
 });
 
-Route::get('/katalog', function () {
+Route::get('/home', function () {
+    return view('page/home');
+});
+
+
+Route::get('/katalogs', [KatalogController::class, 'index']);
+
+Route::get('/katalogs/{katalog:id}', [PostController::class, 'show']);
+
+
+Route::get('/kontak', function () {
     return view('page/katalog');
 });
 
-Route::get('/katalog', [KatalogController::class, 'index']);
+Route::get('/checkout', function () {
+    return view('page/katalog');
+});

@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="logo">
       <i class='bx bxl-codepen bx-sm'></i>
-      <label for="">deedthrone.lc</label>
+      <label for="">Project UTS</label>
       <i class='bx bx-menu-alt-right bx-sm' ></i>
     </div>
     <ul>
@@ -17,37 +17,28 @@
   
       <li>
         <!-- MY TASK -->
-        <a href="task">
+        <a href="katalog">
           <i class='bx bx-task bx-sm'></i>
           <span class="tooltip"></span>
-          <button>My Task</button>
+          <button>Katalog</button>
         </a>
       </li>
   
       <li>
         <!-- MESSAGE -->
-        <a href="inboxs">
+        <a href="kontak">
           <i class='bx bx-message-dots bx-sm' ></i>
           <span class="tooltip"></span>
-          <button>Message</button>
+          <button>Kontak</button>
         </a>
       </li>
   
       <li>
         <!-- CHART -->
-        <a href="chart">
+        <a href="checkout">
           <i class='bx bx-bar-chart-alt-2 bx-sm' ></i>
           <span class="tooltip"></span>
-          <button>Chart</button>
-        </a>
-      </li>
-  
-      <li>
-        <!-- GOAL -->
-        <a href="goal">
-          <i class='bx bx-message-dots bx-sm' ></i>
-          <span class="tooltip"></span>
-          <button>Goal</button>
+          <button>Checkout</button>
         </a>
       </li>
         <div class="navfoot">

@@ -4,8 +4,7 @@
 
 <!-- ISI -->
 
-<div class="home">
-@include('partials.navbarr')
+<div class="home">  
 
     
 </div>
