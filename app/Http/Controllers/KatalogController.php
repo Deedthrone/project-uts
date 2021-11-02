@@ -12,6 +12,7 @@ class KatalogController extends Controller
     {
         return view('page/katalogs', [
             "title" => "Katalogs",
+            "sidebar" => "partials.sidebar",
             "katalogs" => Katalog::all()
         ]);
     }
@@ -20,6 +21,7 @@ class KatalogController extends Controller
     {
         return view('page/katalog', [
             "title" => "Detail",
+            "sidebar" => "partials.sidebarback",
             "katalog" => Katalog::find($id)
         ]);
     }

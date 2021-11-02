@@ -41,7 +41,7 @@
           <button>Checkout</button>
         </a>
       </li>
-        <div class="navfoot">
+        <div class="../navfoot">
         <!-- LOGOUT -->
         <a href="/">
           <i class='bx bx-log-out bx-sm' ></i>

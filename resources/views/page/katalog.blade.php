@@ -9,7 +9,11 @@
 
 
 <div class="checkout">
-    <input type="text" name="" id="" placeholder="{{ $katalog["harga"] }}">
+    <img src="/img/{{ $katalog["gambar"] }}" alt="">
+    <div class="content">
+        <h4>Shop / {{ $katalog["category"] }}</h4>
+        <hr>
+    </div>
 </div>
 
 

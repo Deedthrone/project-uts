@@ -20,7 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('page/home');
+    return view('page/home', [
+        "title" => "Home",
+        "sidebar" => "partials.sidebar"
+    ]);
 });
 
 
@@ -76,9 +79,26 @@ Route::get('/checkout/{id}', [KatalogController::class, 'show']);
 */
 
 Route::get('/kontak', function () {
-    return view('page/kontak');
+    return view('page/kontak', [
+        "title" => "Kontak",
+        "sidebar" => "partials.sidebar"
+    ]);
 });
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
 Route::get('/checkout', function () {
-    return view('page/checkout');
+    return view('page/checkout', [
+        "title" => "Checkout",
+        "sidebar" => "partials.sidebar"
+    ]);
 });

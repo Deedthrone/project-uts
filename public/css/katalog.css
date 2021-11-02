@@ -54,3 +54,28 @@
 .clear {
     clear: both;
 }
+
+
+/* ----------------------- */
+
+.checkout img {
+    width: 500px;
+}
+
+.content {
+    position: relative;
+    left: 500px;
+    bottom: 510px;
+    height: 500px;
+    width: 1100px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+content hr{
+    position: relative;
+    color: white;
+    font-weight: bold 1px white;
+}
