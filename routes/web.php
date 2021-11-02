@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ChartController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Katalog;
 use App\Http\Controllers\KatalogController;
@@ -62,7 +64,7 @@ Route::get('/katalogs', [KatalogController::class, 'index']);
 Route::get('/katalogs/{id}', [KatalogController::class, 'show']);
 
 
-Route::get('/checkout/{id}', [KatalogController::class, 'show']);
+// Route::get('/checkout/{id}', [KatalogController::class, 'show']);
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +81,11 @@ Route::get('/kontak', function () {
     return view('page/kontak');
 });
 
-Route::get('/checkout', function () {
-    return view('page/checkout');
-});
+// Route::get('/checkout', function () {
+//     return view('page/checkout');
+// });
+
+// gading
+
+Route::get('/checkout',[CheckoutController::class, 'index']);
+
