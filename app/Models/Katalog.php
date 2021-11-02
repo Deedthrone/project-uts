@@ -2,20 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Katalog extends Model
+class Katalog
 {
-    use HasFactory;
 
-    private static $katalog = [
+    private static $full_katalog = [
         [
             "id" => 1,
             "nama" => "Sepatu Hiking",
             "category" => "Outfit",
             "harga" => 275000,
-            "kuantitas" => 1,
             "gambar" => "sepatu.jpg"
         ],
 
@@ -24,8 +20,7 @@ class Katalog extends Model
             "nama" => "Tas Gunung",
             "category" => "Outfit",
             "harga" => 580000,
-            "kuantitas" => "Lusmodeus",
-            "gambar" => "gambar.jpg"
+            "gambar" => "tas.jpg"
         ],
 
         [
@@ -33,7 +28,6 @@ class Katalog extends Model
             "nama" => "Korek Api Gunung",
             "category" => "Peralatan",
             "harga" => 35000,
-            "kuantitas" => 1,
             "gambar" => "korek.jpg"
         ],
 
@@ -42,7 +36,6 @@ class Katalog extends Model
             "nama" => "Sleeping Bag",
             "category" => "Peralatan",
             "harga" => 153200,
-            "kuantitas" => 1,
             "gambar" => "sleepbag.jpg"
         ],
 
@@ -51,7 +44,6 @@ class Katalog extends Model
             "nama" => "Tenda",
             "category" => "Peralatan",
             "harga" => 1250000,
-            "kuantitas" => 1,
             "gambar" => "tenda.jpg"
         ],
 
@@ -60,7 +52,6 @@ class Katalog extends Model
             "nama" => "Pisau",
             "category" => "Peralatan",
             "harga" => 36200,
-            "kuantitas" => 1,
             "gambar" => "pisau.jpg"
         ],
 
@@ -68,12 +59,21 @@ class Katalog extends Model
 
     public static function all()
     {
-        return collect(self::$blog_posts);
+        return collect(self::$full_katalog);
     }
 
     public static function find($id)
     {
-        $katalog = static::all();
-        return $katalog->firstWhere('id', $id);
+        $katalogs = static::all();
+        
+        // $katalog = [];
+        // foreach($katalogs as $k) {
+        //     if( $k["id"] == $id ) 
+        //     {
+        //         $katalog = $k;
+        //     }
+        // }
+
+        return $katalogs->firstWhere("id", $id);
     }
 }

@@ -1,5 +1,5 @@
 <div class="navbar">
-    <h2> Page </h2>
+    <h2> Page {{ $title }} </h2>
         <div>
 
         </div>

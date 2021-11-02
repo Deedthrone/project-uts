@@ -30,7 +30,7 @@
   top: 0;
   height: 100%;
   width: 300px;
-  background: #00205c;
+  background-color: black;
   padding: 6px 10px;
   transition: all 0.5s ease;
   color: white;

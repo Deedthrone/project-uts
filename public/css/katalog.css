@@ -1,0 +1,56 @@
+.container {
+    position: fixed;
+    left: 300px;
+    top: 0;
+    min-width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+.container h1  {
+    color: black;
+    font-weight: bold;
+}
+
+
+.container hr  {
+    color: black;
+    font-weight: bold;
+}
+
+/* asdas */
+.productbox {
+    position: relative;
+    left:5px;
+    width: 280px;
+    height: 500px;
+    background-color: rgb(2, 2, 2);
+    box-sizing: border-box;
+    margin: 20px 10px;
+    float: left;
+    padding: 4px 5px;
+}
+
+.productbox img {
+    width: 270px;
+    height: 350px;
+    background-color: aquamarine;
+}
+
+.productbox a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.productbox label {
+    font-weight: bold;
+    color: white;
+}
+
+/* CLEAT */
+.clear {
+    clear: both;
+}

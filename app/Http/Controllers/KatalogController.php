@@ -7,18 +7,20 @@ use App\Models\Katalog;
 
 class KatalogController extends Controller
 {
-    
+
     public function index()
     {
-        return view('posts', [
-            "title" => "Posts",
-            //"posts" => Post::all(),
-            "posts" => Post::latest()->get()
+        return view('page/katalogs', [
+            "title" => "Katalogs",
+            "katalogs" => Katalog::all()
         ]);
     }
-    
-    public static function all()
+
+    public function show($id)
     {
-        return collect(self::$katalog);
+        return view('page/katalog', [
+            "title" => "Detail",
+            "katalog" => Katalog::find($id)
+        ]);
     }
 }

@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="../sidebar">
     <div class="logo">
       <i class='bx bxl-codepen bx-sm'></i>
       <label for="">Project UTS</label>
@@ -8,7 +8,7 @@
   
       <li>
         <!-- HOME -->
-        <a href="home">
+        <a href="../home">
           <i class='bx bx-home bx-sm' ></i>
           <span class="tooltip"></span>
           <button>Home</button>
@@ -17,7 +17,7 @@
   
       <li>
         <!-- MY TASK -->
-        <a href="katalogs">
+        <a href="../katalogs">
           <i class='bx bx-task bx-sm'></i>
           <span class="tooltip"></span>
           <button>Katalog</button>
@@ -26,7 +26,7 @@
   
       <li>
         <!-- MESSAGE -->
-        <a href="kontak">
+        <a href="../kontak">
           <i class='bx bx-message-dots bx-sm' ></i>
           <span class="tooltip"></span>
           <button>Kontak</button>
@@ -35,7 +35,7 @@
   
       <li>
         <!-- CHART -->
-        <a href="checkout">
+        <a href="../checkout">
           <i class='bx bx-bar-chart-alt-2 bx-sm' ></i>
           <span class="tooltip"></span>
           <button>Checkout</button>
