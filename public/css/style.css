@@ -136,7 +136,7 @@ p {
 
 .title::after {
     content: "";
-    background: #3bfff2;
+    background: #000000;
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -156,7 +156,7 @@ h4 {
 }
 
 .rating .fa {
-    color: #3bfff2;
+    color: #000000;
 }
 
 .col-4:hover {
