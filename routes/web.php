@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\ChartController;
+use App\Http\Controllers\CheckoutController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Katalog;
+use App\Models\Login;
 use App\Http\Controllers\KatalogController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +23,12 @@ Route::get('/', function () {
     return view('page/login');
 });
 
+Route::post('/login_action', [LoginController::class, 'LoginAction'])->name('login.post');
+
 Route::get('/home', function () {
     return view('page/home', [
         "title" => "Home",
-        "sidebar" => "partials.sidebar"
+        "sidebars" => "partials.sidebar"
     ]);
 });
 
@@ -65,7 +71,7 @@ Route::get('/katalogs', [KatalogController::class, 'index']);
 Route::get('/katalogs/{id}', [KatalogController::class, 'show']);
 
 
-Route::get('/checkout/{id}', [KatalogController::class, 'show']);
+// Route::get('/checkout/{id}', [KatalogController::class, 'show']);
 
 /*
 |--------------------------------------------------------------------------
@@ -81,7 +87,7 @@ Route::get('/checkout/{id}', [KatalogController::class, 'show']);
 Route::get('/kontak', function () {
     return view('page/kontak', [
         "title" => "Kontak",
-        "sidebar" => "partials.sidebar"
+        "sidebars" => "partials.sidebar"
     ]);
 });
 
@@ -99,6 +105,15 @@ Route::get('/kontak', function () {
 Route::get('/checkout', function () {
     return view('page/checkout', [
         "title" => "Checkout",
-        "sidebar" => "partials.sidebar"
+        "sidebars" => "partials.sidebar"
     ]);
 });
+
+// Route::get('/checkout', function () {
+//     return view('page/checkout');
+// });
+
+// gading
+
+Route::get('/checkout',[CheckoutController::class, 'index']);
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,37 +10,48 @@
     <link rel="stylesheet" href="css/login.css">
     <title>Project Tracking | Login</title>
 </head>
+
 <body>
 
     <div class="info">
-        
+
     </div>
     <div class="container">
         <h1>Login</h1>
         <hr>
-        <form action="home" method="post">
+        <form action="{{ route('login.post') }}" method="post">
+            @csrf
 
-        <!-- USERNAME -->
+            <!-- USERNAME -->
             <div class="field">
                 <i class='bx bxs-user bx-sm'></i>
-                    <span class="tooltip"></span>
+                <span class="tooltip"></span>
                 <input type="text" placeholder="Username" name="username" require>
-            <hr>
+                <hr>
             </div>
-        <!-- PASSWORD -->
+            <!-- PASSWORD -->
             <div class="field">
-                <i class='bx bxs-lock-alt bx-sm' ></i>
-                    <span class="tooltip"></span>
+                <i class='bx bxs-lock-alt bx-sm'></i>
+                <span class="tooltip"></span>
                 <input type="password" placeholder="Password" name="password" require>
-            <hr>
+                <hr>
 
-        <!-- FORGOT YOUR PASSWORD -->
-            <div class="lupaPass">
-                <a href="">Forgot your password?</a>
-            </div>
+                <!-- FORGOT YOUR PASSWORD -->
+                <div class="lupaPass">
+                    <a href="">Forgot your password?</a>
+                </div>
 
-            <input type="submit" value="Login">  
+                <input type="submit" value="Login">
         </form>
     </div>
+
+    <script>
+        @if (Session::has('success'))
+            alert("{{ session('success') }}")
+        @elseif(Session::has('error'))
+            alert("{{ session('error') }}")
+        @endif
+    </script>
 </body>
+
 </html>

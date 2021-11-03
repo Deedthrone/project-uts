@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.back')
 
 @section('home')
 
@@ -6,7 +6,7 @@
 <!-- ISI -->
 <h1>Page {{ $title }}</h1>
 <hr>
-
+<div class="clear"></div>
 
 <div class="checkout">
     <img src="/img/{{ $katalog["gambar"] }}" alt="">
