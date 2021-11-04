@@ -31,6 +31,7 @@ $temp_total = 0;
             <tr>
                 
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                <input type="hidden" name="id" value="{{ $katalog["id"] }}">
                 <td>
                     <div class="cart-info">
                         <img src="img/{{ $katalog["gambar"] }}" alt="">
