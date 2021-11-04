@@ -25,4 +25,12 @@ class KatalogController extends Controller
             "katalog" => Katalog::find($id)
         ]);
     }
+
+    public function checkout()
+    {
+        return view('page/checkout', [
+            "title" => "Checkout",
+            "katalogs" => Katalog::all()
+        ]);
+    }
 }

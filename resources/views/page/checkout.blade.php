@@ -12,21 +12,24 @@
     <div class="small-container chart-page">
         <table>
             <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
+                <th><b>Product</b></th>
+                <th><b>Quantity</b></th>
+                <th><b>Subtotal</b></th>
 
             </tr>
 
+            @foreach ($katalogs as $katalog)
             <tr>
+                
+                
                 <td>
                     <div class="cart-info">
-                        <img src="img/tenda.jpg" alt="">
+                        <img src="img/{{ $katalog["gambar"] }}" alt="">
 
                         <div>
-                            <p>Tenda</p>
+                            <p>{{ $katalog["nama"] }}</p>
 
-                            <small>Price: Rp.1.490.000</small>
+                            <small>Price: Rp.{{ $katalog["harga"] }}</small>
                             <br />
 
                             <a href="">Remove</a>
@@ -39,35 +42,10 @@
 
                 <td><input type="number" value="1"></td>
 
-                <td>Rp.1.490.000</td>
-
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="img/tas.jpg" alt="">
-
-                        <div>
-                            <p>Tas Carrier</p>
-
-                            <small>Price: Rp.60.000</small>
-                            <br>
-
-                            <a href="">Remove</a>
-
-                        </div>
-
-                    </div>
-
-                </td>
-
-                <td><input type="number" value="1"></td>
-
-                <td>Rp.60.000</td>
-
+                <td>Rp. {{ $katalog["harga"] }}</td>
+                
             </tr>
-
-
-            </tr>
+            @endforeach
 
         </table>
 

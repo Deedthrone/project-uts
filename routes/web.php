@@ -105,5 +105,6 @@ Route::get('/checkout', function () {
 // });
 
 
-Route::get('/checkout',[CheckoutController::class, 'index']);
+Route::get('/checkout',[KatalogController::class, 'checkout']);
 
+// Route::get('/checkout',[KatalogController::class, 'checkout']);
