@@ -50,6 +50,10 @@
     font-weight: bold;
     color: white;
 }
+.productbox p {
+    font-weight: bold;
+    color: white;
+}
 
 /* CLEAT */
 .clear {
@@ -59,8 +63,31 @@
 
 /* ----------------------- */
 
-.checkout img {
+.itemdetail {
+    box-sizing: border-box;
+}
+
+
+.itemdetail img {
     width: 500px;
+    color: white;
+}
+
+.itemdetail h4 {
+    font-weight: bold;
+    color: white;
+}
+
+.itemdetail hr {
+    font-weight: bold;
+    width: 9000px;
+    color: white;
+    position: relative;
+    left: -30px;
+}
+
+.itemdetail ul li {
+    color: white;
 }
 
 .content {
@@ -73,6 +100,28 @@
     color: white;
     box-sizing: border-box;
     padding: 20px;
+}
+
+.back {
+    position: relative;
+    left: 32px;
+}
+
+
+.back button{
+    width: 120px;
+    height: 30px;
+    background: rgb(228, 118, 15);
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+}
+
+.back button:hover{
+    border: 1px solid greenyellow;
 }
 
 content hr{

@@ -10,12 +10,11 @@ use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Login Dan Home - Dikerjakan Oleh Sofyan Fanani
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Nama : Mochammad Sofyan Fanani
+| NIM : 18410100231
 |
 */
 
@@ -36,9 +35,6 @@ Route::get('/home', function () {
 // Route::get('/katalogs', [KatalogController::class, 'index']);
 
 // Route::get('/katalogs/{katalog:id}', [KatalogController::class, 'show']);
-
-
-
 
 
 /*
@@ -70,17 +66,13 @@ Route::get('/katalogs', [KatalogController::class, 'index']);
 
 Route::get('/katalogs/{id}', [KatalogController::class, 'show']);
 
-
-// Route::get('/checkout/{id}', [KatalogController::class, 'show']);
-
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Kontak - Dikerjakan Oleh
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Nama : Sigit Aditya Nurbiyantoro
+| NIM : 18410100156
 |
 */
 
@@ -93,12 +85,11 @@ Route::get('/kontak', function () {
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Checkout - Dikerjakan Oleh
 |--------------------------------------------------------------------------
 |
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| Nama : Gading Sukma Prasetio
+| NIM : 18410100260
 |
 */
 
@@ -113,7 +104,6 @@ Route::get('/checkout', function () {
 //     return view('page/checkout');
 // });
 
-// gading
 
 Route::get('/checkout',[CheckoutController::class, 'index']);
 
