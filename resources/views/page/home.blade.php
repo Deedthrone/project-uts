@@ -13,7 +13,6 @@
     <div class="home">
 
         <div class="homecontent">
-            <h3>Selamat Datang {{ session('userdata')['username'] }}</h3>
 
             <h1>Page {{ $title }}</h1>
             <hr>

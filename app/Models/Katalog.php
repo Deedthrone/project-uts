@@ -82,4 +82,14 @@ class Katalog
 
         return $katalogs->firstWhere("id", $id);
     }
+
+    public static function subtotal($price, $quantity)
+    {
+        return($price*$quantity); 
+    }
+    
+    public static function total()
+    {
+        return($a*$b/$c); 
+    }
 }

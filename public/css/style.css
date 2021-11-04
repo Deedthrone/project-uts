@@ -109,7 +109,7 @@ p {
 
 .small-container {
     max-width: 1080px;
-    margin: 50px;
+    margin: 0px 100px;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -497,7 +497,7 @@ td {
 }
 
 td input {
-    width: 40px;
+    width: 50px;
     height: 30px;
     padding: 5px;
 }
@@ -610,4 +610,23 @@ form a {
     margin-top: 8px;
     transform: translateX(100px);
     transition: transform 1s;
+}
+
+.small-container button {
+    position: relative;
+    top: 770px;
+    left: 627px;
+    width: 400px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.small-container button:hover {
+    background: greenyellow;
+    border: 1px solid greenyellow;
 }

@@ -28,8 +28,24 @@ class KatalogController extends Controller
 
     public function checkout()
     {
-        return view('page/checkout', [
+        return view('page/checkouts', [
             "title" => "Checkout",
+            "subtotal" => 0,
+            "total" => 0,
+            "katalogs" => Katalog::all()
+        ]);
+    }
+
+    public function hitung(Request $xx) {
+        $price=$xx->input('price');
+    	$quantity=$xx->input('quantity');
+    	// $c=$xx->input('diskon');
+        $datasubtotal = new Katalog();
+        $printsubtotal = $datasubtotal->subtotal($price, $quantity);
+
+        return view('page/checkouts', [
+            "title" => "Checkout",
+            "subtotal" => $printsubtotal,
             "katalogs" => Katalog::all()
         ]);
     }

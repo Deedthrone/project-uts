@@ -4,6 +4,14 @@
 
 <!-- ISI -->
 
+
+@php
+
+$temp_total = 0; 
+
+@endphp
+
+
 <div class="container">
     <h1>Page {{ $title }}</h1>
 
@@ -18,10 +26,11 @@
 
             </tr>
 
+            <form method="POST" action="hitung">
             @foreach ($katalogs as $katalog)
             <tr>
                 
-                
+                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <td>
                     <div class="cart-info">
                         <img src="img/{{ $katalog["gambar"] }}" alt="">
@@ -30,6 +39,8 @@
                             <p>{{ $katalog["nama"] }}</p>
 
                             <small>Price: Rp.{{ $katalog["harga"] }}</small>
+                            <input type="hidden" name="price" value="{{ $katalog["harga"] }}">
+
                             <br />
 
                             <a href="">Remove</a>
@@ -40,39 +51,38 @@
 
                 </td>
 
-                <td><input type="number" value="1"></td>
+                <td><input type="number" name="quantity" value="0"></td>
 
-                <td>Rp. {{ $katalog["harga"] }}</td>
+
+                <td>Rp. {{ $subtotal }}</td>
+
+                @php
+                    $temp_total = $temp_total + $subtotal;
+                @endphp
+
+                
+
                 
             </tr>
             @endforeach
+            <button type="submit" name="submit">Hitung</button>
+        </form>
+
+    </table>
+
+    <div class="total-price">
+        <table>
+            <tr style="font-weight: bold;">
+                <td>Total</td>
+                <td>Rp.{{ $temp_total }}</td>
+
+            </tr>
 
         </table>
 
-        <div class="total-price">
-            <table>
-                <tr>
-                    <td>Subtotal</td>
-                    <td>Rp.1.550.000</td>
-
-                </tr>
-
-                <tr>
-                    <td>Shipping</td>
-                    <td>Rp.200.000</td>
-
-                </tr>
-
-                <tr style="font-weight: bold;">
-                    <td>Total</td>
-                    <td>Rp.1.750.000</td>
-
-                </tr>
-
-            </table>
-
+    </div>
+        
         </div>
-
     </div>
 
 </div>

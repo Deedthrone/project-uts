@@ -105,6 +105,9 @@ Route::get('/checkout', function () {
 // });
 
 
-Route::get('/checkout',[KatalogController::class, 'checkout']);
+Route::get('/checkouts',[KatalogController::class, 'checkout']);
+Route::post('/hitung', [KatalogController::class, 'hitung']);
+
+// Route::get('/checkout',[KatalogController::class, 'hitung']);
 
 // Route::get('/checkout',[KatalogController::class, 'checkout']);

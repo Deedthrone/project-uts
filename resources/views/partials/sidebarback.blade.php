@@ -35,7 +35,7 @@
 
     <li>
       <!-- CHART -->
-      <a href="../checkout">
+      <a href="../checkouts">
         <i class='bx bx-bar-chart-alt-2 bx-sm' ></i>
         <span class="tooltip"></span>
         <button>Checkout</button>
