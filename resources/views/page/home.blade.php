@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('home')
+<title>Project UTS | Home</title>
 @php
     use Carbon\Carbon;
 @endphp

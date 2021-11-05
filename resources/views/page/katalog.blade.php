@@ -1,6 +1,7 @@
 @extends('layouts.back')
 
 @section('home')
+<title>Project UTS | Detail</title>
 
 <div class="container">
 <!-- ISI -->

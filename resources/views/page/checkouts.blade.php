@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('home')
-
+<title>Project UTS | Checkout</title>
 <!-- ISI -->
 
 
