@@ -88,8 +88,8 @@ class Katalog
         return($price*$quantity); 
     }
     
-    public static function total()
-    {
-        return($a*$b/$c); 
-    }
+    // public static function total()
+    // {
+    //     return($a*$b/$c); 
+    // }
 }
