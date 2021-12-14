@@ -66,6 +66,10 @@ Route::get('/katalogs', [KatalogController::class, 'index']);
 
 Route::get('/katalogs/{id}', [KatalogController::class, 'show']);
 
+Route::get('/sewa/{id}', [KatalogController::class, 'sewa']);
+
+Route::get('/hitungsewa/{id}', [KatalogController::class, 'sewahitung']);
+
 /*
 |--------------------------------------------------------------------------
 | Kontak - Dikerjakan Oleh

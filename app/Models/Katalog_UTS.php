@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Models;
 
-use Illuminate\Http\Request;
 
-class CheckoutController extends Controller
+class Katalog
 {
-    //
+
     private static $full_katalog = [
         [
             "id" => 1,
             "nama" => "Sepatu Hiking",
-            "category" => "Outfit", 
+            "category" => "Outfit",
             "harga" => 275000,
             "gambar" => "sepatu.jpg",
             "penjelasan" => "Sepatu trekking adalah barang wajib untuk melakukan kegiatan alam seperti mendaki gunung atau trekking. Beberapa produsen seperti Eiger, Karrimor, Consina, dan Keen sudah banyak memasarkan sepatu trekking untuk pria dan wanita. Bahan, desain, dan harganya pun beragam sehingga bisa membuat Anda bingung saat memilih."
@@ -64,12 +63,54 @@ class CheckoutController extends Controller
 
     ];
 
-    public function index()
+    public static function all()
     {
-        return view('page/checkout', [
-            "title" => "Checkouts",
-            "sidebars" => "partials.sidebar",
-            "body" => "hallo"
-        ]);
+        return collect(self::$full_katalog);
+    }
+
+    public static function find($id)
+    {
+        $katalogs = static::all();
+        
+        // $katalog = [];
+        // foreach($katalogs as $k) {
+        //     if( $k["id"] == $id ) 
+        //     {
+        //         $katalog = $k;
+        //     }
+        // }
+
+        return $katalogs->firstWhere("id", $id);
+    }
+
+    public static function subtotal($price, $quantity)
+    {
+        return($price*$quantity); 
+    }
+
+    public static function sewasubtotal($price, $quantity, $durasi, $charge)
+    {
+        if ( $durasi == 0  ) {
+            $charge = 0;
+            return($price*$quantity); 
+        }
+
+        elseif ( $durasi == 1 ) {
+            $charge = 0.05;
+            return($price*$quantity*$charge); 
+        } 
+
+        elseif ( $durasi == 2 ) {
+            $charge = 0.10;
+            return($price*$quantity*$charge); 
+        } 
+
+        elseif ( $durasi == 3 ) {
+            $charge = 0.15;
+            return($price*$quantity*$charge); 
+        } 
+        
+        else {
+        }
     }
 }

@@ -7,6 +7,47 @@ use App\Models\Katalog;
 
 class KatalogController extends Controller
 {
+/*
+|--------------------------------------------------------------------------
+| Katalog - Dikerjakan Oleh
+|--------------------------------------------------------------------------
+|
+| Nama : Yosua Christopher Septianus
+| NIM : 18410100233
+|
+*/
+
+
+
+// public function index()
+// {
+//     $x = 1;
+//     return view('page/inboxs', [
+//         "title" => "inbox",
+//         "inboxs" => Inbox::all(),
+//         "types" => Type::all()
+//     ]);
+// }
+
+// public function test(Inbox $inbox)
+// {
+//     return view('/page/inboxs', [
+//         "title" => "Single Post",
+//         "test" => $inbox,
+//         "inboxs" => Inbox::all(),
+//         "types" => Type::all()
+//     ]);
+// }
+
+
+
+// ------------------------------------------------------
+
+
+
+
+
+
 
     public function index()
     {
@@ -25,6 +66,46 @@ class KatalogController extends Controller
             "katalog" => Katalog::find($id)
         ]);
     }
+    public function sewa($id)
+    {
+        return view('page/sewa', [
+            "title" => "Checkout",
+            "subtotal" => 0,
+            "total" => 0,
+            "katalog" => Katalog::find($id)
+        ]);
+    }
+
+
+    public function sewahitung(Request $xx, $id)
+    {
+        $price=$xx->input('price');
+        $durasi=$xx->input('durasi');
+    	$quantity=$xx->input('quantity');
+        $charge=$xx->input('charge');
+        
+        $datatotal = new Katalog();
+        $printtotal = $datatotal->sewasubtotal($price, $quantity, $durasi, $charge);
+        
+        return view('page/sewa', [
+            "title" => "Detail",
+            "katalog" => Katalog::find($id),
+            "subtotal" => 0,
+            "total" => $printtotal
+        ]);
+    }
+
+
+
+    /*
+|--------------------------------------------------------------------------
+| Checkout - Dikerjakan Oleh
+|--------------------------------------------------------------------------
+|
+| Nama : Gading Sukma Prasetio
+| NIM : 18410100260
+|
+*/
 
     public function checkout()
     {

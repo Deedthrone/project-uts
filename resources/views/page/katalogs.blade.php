@@ -21,6 +21,12 @@
             <p>Rp. {{ $katalog["harga"] }}</p>
             <p>Category : {{ $katalog["category"] }}</p>
         </a>
+        <div class="beli">
+            <a href="/sewa/{{ $katalog["id"]; }}">
+                <button>Beli</button>
+            </a>
+        </div>
+    
 </div>
 @else
 <div class="clear"></div>
@@ -32,6 +38,12 @@
         <p>Rp. {{ $katalog["harga"] }}</p>
         <p>Category: {{ $katalog["category"] }}</p>
     </a>
+    <div class="beli">
+        <a href="/sewa/{{ $katalog["id"]; }}">
+            <button>Beli</button>
+        </a>
+    </div>
+
 </div>
 @endif
 

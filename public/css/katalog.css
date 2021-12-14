@@ -129,3 +129,13 @@ content hr{
     color: white;
     font-weight: bold 1px white;
 }
+
+.beli a button {
+    background-color: orange;
+    color: white;
+    border: none;
+    font-weight: bold;
+    height: 35px;
+    width: 270px;
+    border-radius: 7px;
+}

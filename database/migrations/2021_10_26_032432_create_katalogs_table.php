@@ -15,6 +15,11 @@ class CreateKatalogsTable extends Migration
     {
         Schema::create('katalogs', function (Blueprint $table) {
             $table->id();
+            $table->text('nama');
+            $table->text('category');
+            $table->integer('harga');
+            $table->text('gambar');
+            $table->text('penjelasan');
             $table->timestamps();
         });
     }

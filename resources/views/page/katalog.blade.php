@@ -26,16 +26,6 @@
     </div>
 </div>
 
-
-{{-- <div class="test">
-    <ul>
-        <li>{{  $katalog["id"] }}</li>
-        <li>{{  $katalog["nama"] }}</li>
-        <li>{{  $katalog["category"] }}</li>
-        <li>{{  $katalog["harga"] }}</li>
-        <li>{{  $katalog["gambar"] }}</li>
-    </ul>
-</div> --}}
 </div>
 
 @endsection
