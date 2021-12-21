@@ -14,9 +14,9 @@ class CreateKatalogsTable extends Migration
     public function up()
     {
         Schema::create('katalogs', function (Blueprint $table) {
-            $table->id();
-            $table->text('nama');
-            $table->text('category');
+            $table->increments('id');
+            $table->string('nama');
+            $table->string('category');
             $table->integer('harga');
             $table->text('gambar');
             $table->text('penjelasan');
