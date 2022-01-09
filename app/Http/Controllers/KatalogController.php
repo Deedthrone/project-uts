@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Katalog;
+use App\Models\Product;
 
 class KatalogController extends Controller
 {
@@ -49,14 +50,32 @@ class KatalogController extends Controller
 
 
 
+    // public function index()
+    // {
+    //     return view('page/katalogs', [
+    //         "title" => "Katalogs",
+    //         "sidebars" => "partials.sidebar",
+    //         "katalogs" => Katalog::all()
+    //     ]);
+    // }
+
     public function index()
     {
-        return view('page/katalogs', [
+        return view('page/products', [
             "title" => "Katalogs",
             "sidebars" => "partials.sidebar",
-            "katalogs" => Katalog::all()
+            "products" => Product::all()
         ]);
     }
+
+    // public function show($id)
+    // {
+    //     return view('page/katalog', [
+    //         "title" => "Detail",
+    //         "sidebars" => "partials.sidebarback",
+    //         "katalog" => Katalog::find($id)
+    //     ]);
+    // }
 
     public function show($id)
     {
@@ -66,16 +85,26 @@ class KatalogController extends Controller
             "katalog" => Katalog::find($id)
         ]);
     }
+
+    // public function sewa($id)
+    // {
+    //     return view('page/sewa', [
+    //         "title" => "Checkout",
+    //         "subtotal" => 0,
+    //         "total" => 0,
+    //         "katalog" => Katalog::find($id)
+    //     ]);
+    // }
+
     public function sewa($id)
     {
         return view('page/sewa', [
             "title" => "Checkout",
             "subtotal" => 0,
             "total" => 0,
-            "katalog" => Katalog::find($id)
+            "product" => Product::find($id)
         ]);
     }
-
 
     public function sewahitung(Request $xx, $id)
     {

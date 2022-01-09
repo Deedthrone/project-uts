@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Kategori;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class KategoriFactory extends Factory
 {
@@ -21,8 +22,12 @@ class KategoriFactory extends Factory
      */
     public function definition()
     {
+        $kategori_name = $this->faker->bothify('Tas ##??');
+        $slug = Str::slug($kategori_name);
+
         return [
-            //
+            'name' => $kategori_name,
+            'slug' => $slug
         ];
     }
 }
