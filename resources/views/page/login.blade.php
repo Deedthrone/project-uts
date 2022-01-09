@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="/image/logo/deedthrone.jpg">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/login.css">
-    <title>Project Tracking | Login</title>
+    
+    <title>Project UTS | Login</title>
 </head>
 
 <body>
@@ -45,13 +46,13 @@
         </form>
     </div>
 
-    <script>
+    <!-- <script>
         @if (Session::has('success'))
             alert("{{ session('success') }}")
         @elseif(Session::has('error'))
             alert("{{ session('error') }}")
         @endif
-    </script>
+    </script> -->
 </body>
 
 </html>
