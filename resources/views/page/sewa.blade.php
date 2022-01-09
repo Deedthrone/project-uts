@@ -23,61 +23,61 @@
 
             </tr>
 
-            <form method="GET" action="/hitungsewa/{{ $katalog["id"] }}">
-            <tr>
-                
-<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">                
-                <input type="hidden" name="id" value="{{ $katalog["id"] }}">
-                <td>
-                    <div class="cart-info">
-                        <img src="/img/{{ $katalog["gambar"] }}" alt="">
+            <form method="GET" action="/hitungsewa/{{ $product->id }}">
+                <tr>
 
-                        <div>
-                            <p>{{ $katalog["nama"] }}</p>
+                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                    <input type="hidden" name="id" value="{{ $product->id }}">
+                    <td>
+                        <div class="cart-info">
+                            <img src="/img/{{ $product->img }}" alt="{{ $product->name }}">
 
-                            <small>Price: Rp.{{ $katalog["harga"] }}</small>
-                            <input type="hidden" name="price" value="{{ $katalog["harga"] }}">
-                            <input type="hidden" name="charge" value="0">
-                            <br />
+                            <div>
+                                <p>{{ $product->name }}</p>
 
-                            <a href="">Remove</a>
+                                <small>Price: Rp.{{ $product->normal_price }}</small>
+                                <input type="hidden" name="price" value="{{ $product->normal_price }}">
+                                <input type="hidden" name="charge" value="0">
+                                <br />
+
+                                <a href="">Remove</a>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </td>
 
-                </td>
+                    <td><input type="number" name="quantity" value="0"></td>
 
-                <td><input type="number" name="quantity" value="0"></td>
+                    <td><input type="number" name="durasi" value="0"></td>
 
-                <td><input type="number" name="durasi" value="0"></td>
-
-                <td>Rp. {{ $total }}</td>
+                    <td>Rp. {{ $total }}</td>
 
 
-                
 
-                
-            </tr>
-            <button type="submit" name="beli">Hitung</button>
-        </form>
 
-    </table>
 
-    <div class="total-price">
-        <table>
-            <tr style="font-weight: bold;">
-                <td>Total</td>
-                <td>Rp. {{ $total }}</td>
-
-            </tr>
+                </tr>
+                <button type="submit" name="beli">Hitung</button>
+            </form>
 
         </table>
 
-    </div>
-        
+        <div class="total-price">
+            <table>
+                <tr style="font-weight: bold;">
+                    <td>Total</td>
+                    <td>Rp. {{ $total }}</td>
+
+                </tr>
+
+            </table>
+
         </div>
+
     </div>
+</div>
 
 </div>
 

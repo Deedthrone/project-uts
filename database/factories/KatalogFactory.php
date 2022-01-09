@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Katalog;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str
 
 class KatalogFactory extends Factory
 {
